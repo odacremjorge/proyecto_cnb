@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <style media="screen">
+    body {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/muro3.png" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100%;
+    }
+   
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+    p {
+      color: rgb(10, 10, 10);
+    }
+
+    .h {
+      color: rgb(10, 10, 10);
+    }
+  </style>
+
+  <title>Noticias CNB</title>
+</head>
+
+<body>
+
+  {% include "colegio_cnb/navbar.html" %}
+  <br><br>
+  <center>
+    <h3 class='alert alert-info' style="margin-bottom:0px;">NOTICIAS DEL COLEGIO NACIONAL SIMÓN BOLIVAR</h3>
+  </center>
+  <center>
+    <div class="img mb-3">
+      <img src="{% static "images/noticias1.gif" %}" alt="John" style="width:15%">
+      <br>
+        <h1>Lo mas destacado</h1>
+      <br>
+      <img src="{% static "images/cargando.gif" %}" alt="John" style="width:12%">
+    </div>
+  </center>
+  
+  <p>Explore nuestro sitio web. Para mas información contactarse con los 4 numeros de Whatsapp a disposición en el pie del sitio web, o visita la pagina de facebook. 24 de Julio SALUD!!!</p>
+    
+    <p class="lead">
+      <a class="btn btn-outline-info btn-lg" href="/" role="button">INICIO</a>
+    </p>
+    
+  </div>
+  
+  {% include "colegio_cnb/footer.html" %}
+</body>
+
+</html>

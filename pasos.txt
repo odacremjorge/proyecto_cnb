@@ -1,0 +1,15 @@
+'default': {   
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'exalumnos',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+
+# env\Scripts\activate
+# pip install -r requierements.txt
+# python manage.py makemigrations
+# python manage.py migrate
+# python manage.py runserver
+# exalumnos cnb colegio bolivar oruro

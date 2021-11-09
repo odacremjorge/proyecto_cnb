@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Equipos CNB</title>
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/cnb4.jpg" %}');
+      background-size: cover;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "colegio_cnb/navbar.html" %}
+  <br><br>
+  <div class="jumbotron" style="margin-bottom:0px;">
+    <h1 class="display-4">Mi plantel sera siempre el primero!!!</h1>
+    <p class="lead">Bienvenido al registro de los equipos para los distintos campeonatos de exalumnos del Colegio nacional Simón Bolivar</p>
+    <hr class="my-4">
+    <p>Puede acceder a varias funciones después de iniciar sesión. Podra iniciar sesión siendo aceptado en el respectivo campeonato que desea participar, todos los campeonatos en curso o los futuros campeonatos se veran posteados en el sitio web.</p>
+    <p class="lead">
+      <a class="btn btn-outline-info btn-lg" href="mechanicsignup" role="button">Registrar Equipo</a>
+      <a class="btn btn-outline-info btn-lg" href="mechaniclogin" role="button">Iniciar Sesión</a>
+    </p>
+  </div>
+  {% include "colegio_cnb/footer.html" %}
+</body>
+
+</html>

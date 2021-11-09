@@ -1,0 +1,158 @@
+{% extends 'colegio_cnb/adminbase.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style type="text/css">
+    a:link {
+      text-decoration: none;
+    }
+
+    body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   /* background: linear-gradient(to right, #87b0df, #ffffff);*/
+    background-image: url('{% static "images/aguila5.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+    h6 {
+      color: white;
+      font-size: 0.90em;
+    }
+
+    .order-card {
+      color: #fff;
+    }
+
+    .bg-c-blue {
+      background-color: rgba(160, 28, 28, 0.5);
+    }
+
+    .bg-c-green {
+      background-color: rgba(18, 71, 170, 0.5);
+    }
+
+    .bg-c-yellow {
+      background-color: rgba(17, 175, 12, 0.5);
+    }
+
+    .bg-c-pink {
+      
+      background-color: rgba(209, 196, 12, 0.5);
+    }
+
+
+    .card {
+      border-radius: 5px;
+      -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+      box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+      border: none;
+      margin-bottom: 30px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card .card-block {
+      padding: 25px;
+    }
+
+    .order-card i {
+      font-size: 26px;
+    }
+
+    .f-left {
+      float: left;
+    }
+
+    .f-right {
+      float: right;
+    }
+    h6{
+      size:20;
+    }
+  </style>
+</head>
+
+<body>
+
+  <br><br><br><br><br>
+  <div style="margin-left:100px;" class="container">
+    <div class="row">
+      <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <a href="/admin-view-mechanic">
+              <h6 class="m-b-20">Ver Todos los Equipos</h6>
+            </a>
+            <h2 class="text-right"><i class="fas fa-eye f-left"></i></h2>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-green order-card">
+          <div class="card-block">
+            <a href="/admin-add-mechanic">
+              <h6 class="m-b-20">Agregar Equipo</h6>
+            </a>
+            <h2 class="text-right"><i class="fas fa-plus-circle f-left"></i></h2>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-yellow order-card">
+          <div class="card-block">
+            <a href="/admin-approve-mechanic">
+              <h6 class="m-b-20">Aprobar Equipos</h6>
+            </a>
+            <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-pink order-card">
+          <div class="card-block">
+            <a href="/admin-view-mechanic-salary">
+              <h6 class="m-b-20">Ver Inscripciones de Equipos</h6>
+            </a>
+              <h2 class="text-right"><i class="fas fa-rupee-sign f-left"></i></h2>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <a href="/admin-mechanic-attendance">
+              <h6 class="m-b-20">Asistencia de Delegados</h6>
+            </a>
+              <h2 class="text-right"><i class="fas fa-calendar-week f-left"></i></h2>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+{% endblock content %}

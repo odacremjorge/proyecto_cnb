@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: rgba(64, 123, 231, 0.6);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+    }
+
+
+    .title {
+      color: rgb(244, 248, 252);
+      font-size: 18px;
+    }
+
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: rgb(253, 250, 250);
+      background-color: rgb(61, 157, 201);
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    button:hover,
+    a:hover {
+      opacity: 0.7;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      padding: 60px;
+      margin-left:150px;
+      width: 100%;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: rgb(243, 237, 237);
+    }
+   
+    p {
+      color: rgb(243, 237, 237);
+    }
+
+    title {
+      color: rgb(243, 237, 237);
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/exalumno3.jpg" %}" alt="John" style="width:100%">
+        <p class="title">Ex Alumno</p>
+        <p><button><a href="/customerclick">Ver</a></button></p>
+      </div>
+
+    </div>
+
+    <div class="grid-item">
+      <div class="card">
+        <img src="{% static "images/equipo2.jpg" %}" alt="John" style="width:100%">
+        <p class="title">Equipo</p>
+        <p><button><a href="/mechanicsclick">Ver</a></button></p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+</body>
+
+</html>

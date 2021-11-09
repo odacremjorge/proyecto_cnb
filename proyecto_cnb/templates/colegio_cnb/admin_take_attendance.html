@@ -1,0 +1,109 @@
+{% extends 'colegio_cnb/adminbase.html' %}
+
+{% load widget_tweaks %}
+{% load static %}
+
+
+{% block content %}
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+    body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   /* background: linear-gradient(to right, #87b0df, #ffffff);*/
+    background-image: url('{% static "images/aguila5.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+
+    .btnSubmit {
+      text-align: center;
+    }
+    .xyz{
+      
+      display: table;
+      margin-right: auto;
+      margin-left: auto;
+            }
+    .sidebar{
+        top:0px;
+    }
+  </style>
+
+</head>
+
+
+
+
+<form class="box xyz"  method="post"  autocomplete="off">
+
+
+    <div class="row">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h6 class="panel-title">Asistencia</h6>
+
+        </div>
+
+        <table class="table table-hover" id="dev-table">
+          <thead>
+
+            <tr>
+              <th>Promoción Decada</th>
+              <th>Presente/Ausente</th>
+            </tr>
+          </thead>
+
+
+          {% csrf_token %}
+          {%for m in mechanics%}
+          <tr>
+            <td>{{m.get_name}}</td>
+            <td>{{aform.present_status}}</td>
+          </tr>
+          {%endfor%}
+
+
+          
+
+        </table>
+        {% render_field aform.date class="form-control" placeholder="Ingresar Fecha mm/dd/yyyy" %}
+        <input type="submit" style="margin-left: 200px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;    background-color: #577bdf;" name="submit" value="Subir">
+      </div>
+
+
+    
+  </div>
+</form>
+
+<!--
+written By : sumit kumar
+facebook : fb.com/sumit.luv
+-->
+
+
+{% endblock content %}

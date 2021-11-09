@@ -1,0 +1,70 @@
+{% extends 'colegio_cnb/mechanicbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    input[type=text], select,input[type=number] , textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   /* background: linear-gradient(to right, #87b0df, #ffffff);*/
+    background-image: url('{% static "images/aguila5.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #5599d8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #5599d8;
+  }
+
+
+  </style>
+
+
+</head>
+
+<br><br><br><br><br>
+<h3 style="text-align:center;">Enviar comentarios al administrador</h3>
+<div>
+  <form method="post" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+
+    <label for="by">Tu nombre</label>
+    {% render_field feedback.by class="form-control"  %}
+
+    <label for="message">Mensaje</label>
+    {% render_field feedback.message class="form-control"  %}
+
+    <input type="submit" value="Enviar">
+  </form>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,77 @@
+{% extends 'colegio_cnb/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    input[type=text], select,input[type=number] ,input[type=password], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   /* background: linear-gradient(to right, #87b0df, #ffffff);*/
+    background-image: url('{% static "images/aguila5.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #96c1e9;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #2349c7;
+  }
+
+
+  </style>
+
+
+</head>
+
+<br><br><br><br><br>
+<h3 style="text-align:center;">ACTUALIZAR DATOS DEL EX ALUMNO</h3>
+<div>
+  <form method="post"  enctype="multipart/form-data" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+        <label for="first_name">Nombres</label>
+        {% render_field userForm.first_name class="form-control" placeholder="Nombres" %}
+        <label for="last_name">Apellidos</label>
+        {% render_field userForm.last_name class="form-control" placeholder="Apellidos" %}
+          <label for="mobile">Celular</label>
+          {% render_field customerForm.mobile class="form-control" placeholder="Celular" %}
+            <label for="address">Promoción</label>
+          {% render_field customerForm.address class="form-control" placeholder="Promoción" %}
+        <label for="username">Nombre de Usuario</label>
+        {% render_field userForm.username class="form-control" placeholder="Nombre de usuario" %}
+          <label for="password">Contraseña</label>
+        {% render_field userForm.password class="form-control" placeholder="Contraseña" %} <br><br>
+        <label for="profile_pic">Foto de Perfil</label>
+          {% render_field customerForm.profile_pic class="form-control" placeholder="Foto de perfil" %}
+<br><br>
+    <input type="submit" value="Actualizar">
+  </form>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

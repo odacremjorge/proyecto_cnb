@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <style media="screen">
+    .jumbotron {
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  {% include "colegio_cnb/navbar.html" %}
+  <br><br>
+  <div class="jumbotron">
+    <h1 class="display-4">Su mensaje a sido enviado satisfactoriamente !</h1>
+    <p class="lead">Responderemos a sus comentarios pronto</p>
+    <hr class="my-4">
+    <p>Ver otras características del sitio web !</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">INICIO</a>
+    </p>
+  </div>
+
+  {% include "colegio_cnb/footer.html" %}
+</body>
+
+</html>

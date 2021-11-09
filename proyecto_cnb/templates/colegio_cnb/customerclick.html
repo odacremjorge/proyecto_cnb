@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+    <title>exalumno CNB</title>
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/cnb4.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+      
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "colegio_cnb/navbar.html" %}
+  <br><br>
+  <div class="jumbotron" style="margin-bottom:0px;">
+    <h1 class="display-4">24 de Julio Salud!!!</h1>
+    <p class="lead">Bienvenido al registro de ex alumnos del poderoso Colegio Nacional Simón Bolivar de la ciudad de Oruro en Bolivia</p>
+    <hr class="my-4">
+    <p>Puedes acceder a varias funciones después de iniciar sesión, luego de una revisión se le aprobara para acreditarlo como ex alumno del colegio, en caso de alguna observacón contactanos para la entrega de documentos que acrediten a la persona como ex alumno del Colegio nacional Simón Bolivar.</p>
+    <p class="lead">
+      <a class="btn btn-outline-info btn-lg" href="customersignup" role="button">Crear tu Cuenta</a>
+      <a class="btn btn-outline-info btn-lg" href="customerlogin" role="button">Iniciar Sesión</a>
+    </p>
+  </div>
+  {% include "colegio_cnb/footer.html" %}
+</body>
+
+</html>

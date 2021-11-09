@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+
+
+</head>
+
+<body>
+
+  {% include "colegio_cnb/navbar.html" %}
+  <br><br>
+
+  <center>
+    <h3 class='alert alert-success'>Envíenos sus valiosos comentarios !</h3>
+
+    <form method="POST">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        <p>
+        <h3>{{ form.as_p }}</h3>
+        </p>
+        <br>
+        <input type="submit" value="Enviar Mensaje" class='btn btn-danger btn-lg'>
+      </div>
+    </form>
+  </center>
+  <marquee behavior="scroll" direction="left">
+    <img src="{% static "images/suzuki.png" %}" width="120" height="80" alt="suzuki" />
+    <img src="{% static "images/greatwall.png" %}" width="120" height="80" alt="greatwall" />
+    <img src="{% static "images/mazda.png" %}" width="120" height="80" alt="mazda" />
+    <img src="{% static "images/nissan.png" %}" width="120" height="80" alt="nissan" />
+    <img src="{% static "images/ford.png" %}" width="120" height="80" alt="ford" />
+    <img src="{% static "images/honda.png" %}" width="120" height="80" alt="honda" />
+    <img src="{% static "images/jac.png" %}" width="120" height="80" alt="jac" />
+    <img src="{% static "images/toyota.png" %}" width="120" height="80" alt="toyota" />
+    <img src="{% static "images/vw.png" %}" width="120" height="80" alt="vw" />
+    <img src="{% static "images/higer.png" %}" width="120" height="80" alt="higer" />
+    <img src="{% static "images/lada.png" %}" width="120" height="80" alt="lada" />
+    <img src="{% static "images/fiat.png" %}" width="120" height="80" alt="fiat" />
+    <img src="{% static "images/mit.png" %}" width="120" height="80" alt="mit" />
+    <img src="{% static "images/usm.png" %}" width="120" height="80" alt="usm" />
+    <img src="{% static "images/zna.png" %}" width="120" height="80" alt="zna" />
+    <img src="{% static "images/foton.png" %}" width="120" height="80" alt="foton" />
+    <img src="{% static "images/zon.png" %}" width="150" height="80" alt="zon" />
+    <img src="{% static "images/mack.png" %}" width="120" height="80" alt="mack" />
+ </marquee>
+  {% include "colegio_cnb/footer.html" %}
+</body>
+
+</html>

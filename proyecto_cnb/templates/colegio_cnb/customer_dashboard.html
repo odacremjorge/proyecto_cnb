@@ -1,0 +1,67 @@
+{% extends 'colegio_cnb/customerbase.html' %}
+{% load static %}
+{% block content %}
+
+	<!-- main content -->
+	<div class="wrapper">
+
+<!-- ****** cards start ********** -->
+		<div class="row">
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-primary">
+					<p>
+						<i class="fas fa-tasks"></i>
+					</p>
+					<h3>{{new_request_made}}</h3>
+					<p>Nueva Solicitud Realizada</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-warning">
+					<p>
+						<i class="fas fa-spinner"></i>
+					</p>
+					<h3>{{work_in_progress}}</h3>
+					<p>Campeonatos en curso</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-success">
+					<p>
+						<i class="fas fa-check-circle"></i>
+					</p>
+					<h3>{{work_completed}}</h3>
+					<p>Participaciones en Campeonatos</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg-danger">
+					<p>
+						<i class="fas fa-rupee-sign"></i>
+					</p>
+					<h3>{{bill}}</h3>
+					<p>Total Inscripciones</p>
+				</div>
+			</div>
+		</div><br><br><br><br>
+		<marquee behavior="scroll" direction="left">
+			 
+			 <img src="{% static "images/volei.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/basquet.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/futsal.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/tenis.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/futbol.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/ping.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/base.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/natacion.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/atle.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/hand.png" %}" width="120" height="120" alt="uno" />
+			 <img src="{% static "images/bici.png" %}" width="120" height="120" alt="uno" />
+   			 
+	 </marquee>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- ****** cards end ********** -->
+
+	</div>
+	<!-- end main content -->
+{% endblock content %}

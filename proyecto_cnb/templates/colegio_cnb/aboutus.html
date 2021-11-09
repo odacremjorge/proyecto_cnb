@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/cnb5.jpg" %}');
+      background-size: cover;
+    }
+   
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+
+  <title>Acerca de Nosotros</title>
+</head>
+
+<body>
+
+  {% include "colegio_cnb/navbar.html" %}
+  <br><br>
+  <center>
+    <h3 class='alert alert-info' style="margin-bottom:0px;">Promoción 2004 "A" CNB Oruro-2021</h3>
+  </center>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <h1 class="display-4">Hola estimado Ex Alumno</h1>
+    <p class="lead">Este es un aporte al registro de ex alumnos del Colegio nacional Simón Bolivar de la ciudad de Oruro y al registro de las distintas promociones que como equipos participan de los distintos campeonatos que se realizan.</p>
+    
+    <hr class="my-4">
+    <p>Explore nuestro sitio web. Para mas información contactarse con los 4 numeros de Whatsapp a disposición en el pie del sitio web, o visita la pagina de facebook. 24 de Julio SALUD!!!</p>
+    
+    <p class="lead">
+      <a class="btn btn-outline-info btn-lg" href="/" role="button">INICIO</a>
+    </p>
+    
+  </div>
+ 
+  <marquee behavior="scroll" direction="left">
+   <img src="{% static "images/coco1.png" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/21.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/22.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/23.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/24.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/equipo.png" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/logo.jpeg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/27.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/25.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/logo1.jpeg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/logo2.jpeg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/logo3.jpeg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/28.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/29.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/30.jpg" %}" width="120" height="113" alt="uno" />
+   <img src="{% static "images/31.jpg" %}" width="120" height="113" alt="uno" />
+ </marquee>
+
+ 
+  {% include "colegio_cnb/footer.html" %}
+</body>
+
+</html>

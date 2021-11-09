@@ -1,0 +1,66 @@
+{% extends 'colegio_cnb/customerbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    input[type=text], select,input[type=number] ,input[type=password], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #649eeb;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #649eeb;
+  }
+
+
+  </style>
+
+
+</head>
+
+<br><br><br><br><br>
+<h1 style="text-align:center;color:blue;">Editar tu Perfil</h1>
+<div>
+  <form method="post"  enctype="multipart/form-data" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+        <label for="first_name">Nombres</label>
+        {% render_field userForm.first_name class="form-control" placeholder="Nombres" %}
+        <label for="last_name">Apellidos</label>
+        {% render_field userForm.last_name class="form-control" placeholder="Apellidos" %}
+          <label for="mobile">Celular</label>
+          {% render_field customerForm.mobile class="form-control" placeholder="Celular" %}
+            <label for="address">Promoción</label>
+          {% render_field customerForm.address class="form-control" placeholder="Promoción" %}
+
+        <label for="username">Nombre de Usuario</label>
+        {% render_field userForm.username class="form-control" placeholder="Nombre de Usuario" %}
+          <label for="password">Contraseña</label>
+        {% render_field userForm.password class="form-control" placeholder="Contraseña" %} <br><br>
+        <label for="profile_pic">Foto de Perfil</label>
+          {% render_field customerForm.profile_pic class="form-control" placeholder="Foto de Perfil" %}
+<br><br>
+    <input type="submit" value="Editar">
+  </form>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

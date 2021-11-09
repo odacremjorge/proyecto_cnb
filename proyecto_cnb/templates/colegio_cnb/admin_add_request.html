@@ -1,0 +1,95 @@
+{% extends 'colegio_cnb/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    input[type=text], select,input[type=number] , textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   /* background: linear-gradient(to right, #87b0df, #ffffff);*/
+    background-image: url('{% static "images/aguila5.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4c87af;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #4e45a0;
+  }
+
+
+  </style>
+
+
+</head>
+
+
+
+
+<br><br><br><br><br>
+<h1 style="text-align:center;">SOLICITUD DE INGRESO A CAMPEONATO</h1>
+<div>
+  <form method="post" style="margin-left:200px;margin-right:200px;">
+      {% csrf_token %}
+    <label for="category">Tipo de Campeonato</label>
+    {% render_field enquiry.category class="form-control"  %}<br>
+
+    <label for="vehicle_no"># de Uniforme</label>
+    {% render_field enquiry.vehicle_no class="form-control" placeholder="#" %}
+
+    <label for="vehicle_name">Promoción</label>
+    {% render_field enquiry.vehicle_name class="form-control" placeholder="Promocion" %}
+
+    <label for="vehicle_brand">Decada</label>
+    {% render_field enquiry.vehicle_brand class="form-control" placeholder="Decada" %}
+
+    <label for="vehicle_model">Nombre del Jugador</label>
+    {% render_field enquiry.vehicle_model class="form-control" placeholder="Nombre del Jugador" %}
+
+    <label for="problem_description">Comentarios</label>
+    {% render_field enquiry.problem_description class="form-control" placeholder="Comentarios" %}
+
+    <label for="cost">Inscripcción</label>
+    {% render_field adminenquiry.cost class="form-control" placeholder="Inscripcción" %}
+
+    <label for="customer">Ex Alumno</label>
+    {% render_field adminenquiry.customer class="form-control" %}
+
+    <label for="mechanic">Equipo</label>
+    {% render_field adminenquiry.mechanic class="form-control"  %}
+
+
+
+    <input type="submit" value="Subir">
+  </form>
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

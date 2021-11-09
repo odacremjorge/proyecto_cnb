@@ -1,0 +1,76 @@
+{% extends 'colegio_cnb/adminbase.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    body {
+        margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+   /* background: linear-gradient(to right, #87b0df, #ffffff);*/
+    background-image: url('{% static "images/aguila5.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+    .xyz{
+      
+      display: table;
+      margin-right: auto;
+      margin-left: auto;
+            }
+    .sidebar{
+        top:0px;
+    }
+  </style>
+
+</head>
+<div class="container">
+  <div class="row xyz">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6 class="panel-title">Asistencia de Delegados y fecha {{date}}</h6>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>Nombre del Delegado</th>
+            
+            <th>Presente/Ausente</th>
+          </tr>
+        </thead>
+        {%for attendancedata,mechanicdata in mylist %}
+        <tr>
+          <td>{{mechanicdata.get_name}}</td>
+          
+          <td>{{attendancedata.present_status}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
